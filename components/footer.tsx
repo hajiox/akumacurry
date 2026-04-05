@@ -10,9 +10,58 @@ function XIcon({ className }: { className?: string }) {
   )
 }
 
+const faqData = [
+  {
+    q: "このカレーは激辛ですか？",
+    a: "激辛ではありません。にんにくや背脂のパンチはしっかりありますが、辛さは「程よい中辛」です。辛すぎて味が分からなくなるタイプではなく、旨味とコクをしっかり楽しめる仕上がりです。"
+  },
+  {
+    q: "どんな味わいですか？",
+    a: "豚の旨味をベースに、にんにくと背脂のコクが重なった濃厚な味わいです。見た目のインパクトは強いですが、ただ重いだけではなく、スプーンが進むやみつき感のあるバランスに仕上げています。"
+  },
+  {
+    q: "チャーシューはどんな特徴がありますか？",
+    a: "主役は極厚ざぶとんチャーシューです。\"リュウジのバズレシピ\"さんでも絶賛された神豚を使用しており、しっかり厚みがありながら、湯煎することでやわらかくトロトロの食感を楽しめます。食べごたえも満足感もしっかりある一品です。"
+  },
+  {
+    q: "調理は簡単ですか？",
+    a: "はい、とても簡単です。袋のまま熱湯で約8分温めるだけでお召し上がりいただけます。忙しい日でも手軽に、濃厚で満足感のある一皿を楽しめます。"
+  },
+  {
+    q: "保存はどのくらいできますか？",
+    a: "常温で保存可能で、賞味期限は18ヶ月です。普段の食事用はもちろん、ストック用や備蓄用としても便利です。食べたい時にすぐ使えるのも魅力です。"
+  },
+  {
+    q: "どこで購入できますか？",
+    a: "Yahoo!ショッピング限定で販売しています。ここでしか手に入らない限定商品です。さらに、14時までのご注文で即日発送対応なので、早めに受け取りたい方にもおすすめです。"
+  }
+]
+
 export default function Footer() {
   return (
     <footer className="bg-white">
+      {/* FAQ Section */}
+      <div className="bg-white py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-neutral-800 mb-8">
+            よくあるご質問
+          </h2>
+          <div className="space-y-4">
+            {faqData.map((item, index) => (
+              <div key={index} className="border-b border-neutral-200 pb-4">
+                <h3 className="font-bold text-neutral-800 mb-2 flex items-start gap-2">
+                  <span className="text-red-600 font-bold shrink-0">Q{index + 1}.</span>
+                  {item.q}
+                </h3>
+                <p className="text-neutral-600 leading-relaxed pl-8">
+                  <span className="text-blue-600 font-bold">A.</span> {item.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Shipping Banners */}
       <div className="bg-neutral-100 py-8">
         <div className="container mx-auto px-4">
