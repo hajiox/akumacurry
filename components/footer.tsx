@@ -38,7 +38,7 @@ export default function Footer() {
       {/* 価格 */}
       <div className="bg-neutral-900 py-6">
         <p className="text-center text-white text-2xl md:text-3xl font-bold tracking-wide">
-          2個セット <span className="text-4xl md:text-5xl mx-2">1,690</span>円（税込・送料込）
+          {"2個セット "}<span className="text-4xl md:text-5xl mx-2">1,690</span>{"円（税込・送料込）"}
         </p>
       </div>
 
