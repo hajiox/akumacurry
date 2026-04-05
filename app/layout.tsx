@@ -10,13 +10,47 @@ const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp"
 });
 
+const siteUrl = 'https://akumacurry.aizu-syokubura.com'
+const siteName = '悪魔のBUTAカレー | 会津ブランド館'
+const siteTitle = '悪魔のBUTAカレー | 二郎インスパイア×極厚神豚カレー【送料無料】会津ブランド館'
+const siteDescription = '【2個セット1,690円送料無料】ニンニク・アブラ増々！理性を破壊する悪魔的背徳感。認定グルメ「至高」評価の伝説の極厚神豚使用。スプーンで切れる柔らかさの超厚切りザブトンチャーシューが主役の悪魔のカレー。常温保存18ヶ月で備蓄食にも最適。'
+
 export const metadata: Metadata = {
-  title: '悪魔のBUTAカレー | 二郎インスパイア×カレーの究極コラボ【会津ブランド館】',
-  description: 'ニンニク・アブラ増々！理性を破壊する悪魔的背徳感。認定グルメ「至高」評価の伝説の極厚神豚を使用した、スプーンで切れる柔らかさの超厚切りザブトンチャーシューが主役の悪魔のカレー。',
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
   generator: 'v0.app',
+  keywords: ['悪魔のBUTAカレー', '二郎インスパイア', 'カレー', '極厚チャーシュー', '神豚', 'レトルトカレー', '会津ブランド館', '送料無料', '備蓄食'],
+  authors: [{ name: '会津ブランド館' }],
   icons: {
     icon: '/favicon.png',
     apple: '/favicon.png',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'ja_JP',
+    url: siteUrl,
+    siteName: siteName,
+    title: siteTitle,
+    description: siteDescription,
+    images: [
+      {
+        url: '/images/ogp.jpg',
+        width: 1200,
+        height: 630,
+        alt: '悪魔のBUTAカレー - 二郎インスパイア×極厚神豚カレー',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteTitle,
+    description: siteDescription,
+    images: ['/images/ogp.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 
