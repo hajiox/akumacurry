@@ -41,20 +41,20 @@ export default function Footer() {
   return (
     <footer className="bg-white">
       {/* FAQ Section */}
-      <div className="bg-white py-12">
+      <div className="bg-neutral-900 py-14">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-neutral-800 mb-8">
-            よくあるご質問
+          <h2 className="text-2xl md:text-3xl font-black text-center text-white mb-10 tracking-wider">
+            FAQ
           </h2>
-          <div className="space-y-4">
+          <div className="space-y-0">
             {faqData.map((item, index) => (
-              <div key={index} className="border-b border-neutral-200 pb-4">
-                <h3 className="font-bold text-neutral-800 mb-2 flex items-start gap-2">
-                  <span className="text-red-600 font-bold shrink-0">Q{index + 1}.</span>
+              <div key={index} className="border-t border-neutral-700 py-5 last:border-b">
+                <h3 className="font-bold text-white mb-3 flex items-start gap-3 text-base md:text-lg">
+                  <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded shrink-0 mt-0.5">Q{index + 1}</span>
                   {item.q}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed pl-8">
-                  <span className="text-blue-600 font-bold">A.</span> {item.a}
+                <p className="text-neutral-400 leading-relaxed pl-11 text-sm md:text-base">
+                  {item.a}
                 </p>
               </div>
             ))}
