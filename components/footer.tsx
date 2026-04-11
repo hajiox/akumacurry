@@ -135,10 +135,12 @@ export default function Footer() {
       </div>
 
       {/* 価格 */}
-      <div className="bg-neutral-900 py-6">
-        <p className="text-center text-white text-2xl md:text-3xl font-bold tracking-wide">
-          {"2個セット "}<span className="text-4xl md:text-5xl mx-2">1,690</span>{"円（税込・送料込）"}
-        </p>
+      <div className="bg-neutral-900 py-6 px-4">
+        <div className="flex flex-wrap items-baseline justify-center gap-x-2 gap-y-1">
+          <span className="text-white text-xl md:text-2xl font-bold whitespace-nowrap">{"2個セット"}</span>
+          <span className="text-white text-4xl md:text-5xl font-black whitespace-nowrap">{"1,690円"}</span>
+          <span className="text-white text-base md:text-lg font-bold whitespace-nowrap">{"（税込・送料込）"}</span>
+        </div>
       </div>
 
       {/* Yahoo Shopping Banner */}
