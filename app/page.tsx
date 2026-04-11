@@ -10,10 +10,10 @@ export default function LandingPage() {
         {/* Hero Section */}
         <section className="w-full">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/01%E6%82%AA%E9%AD%94%E3%81%AEBUTA%E3%82%AB%E3%83%AC%E3%83%BC%EF%BC%88%E6%A8%AA%EF%BC%89-2d1jBhlZxYY6aqcNz4fZJyPoD9erP7.jpg"
-            alt="悪魔のBUTAカレー - 二郎インスパイア×カレー"
-            width={1920}
-            height={1080}
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%82%AA%E9%AD%94BUTA%E3%82%AB%E3%83%AC%E3%83%BC%EF%BC%88%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2%EF%BC%89-P9Vvo3TdIrLeAZRwdM889lcUrhVHRd.jpg"
+            alt="悪魔のBUTAカレー - 二郎インスパイア+カレー ニンニクアブラ増し増し！理性を崩壊させる悪魔的背徳感"
+            width={1024}
+            height={1024}
             className="w-full h-auto rounded-lg"
             priority
           />
