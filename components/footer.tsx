@@ -1,6 +1,20 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Facebook, Instagram, Youtube } from "lucide-react"
+
+function handleMallClick(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
+  e.preventDefault()
+  try {
+    if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
+      (window as any).fbq("trackCustom", "MallClick", { product: "butacurry" })
+    }
+  } catch {}
+  setTimeout(() => {
+    window.open(href, "_blank", "noopener,noreferrer")
+  }, 400)
+}
 
 function XIcon({ className }: { className?: string }) {
   return (
@@ -147,9 +161,8 @@ export default function Footer() {
       <div className="bg-pink-100 py-6">
         <div className="container mx-auto px-4 flex justify-center">
           <a 
-            href="https://store.shopping.yahoo.co.jp/aizubrandhall/4571318635230.html" 
-            target="_blank" 
-            rel="noopener noreferrer"
+            href="https://store.shopping.yahoo.co.jp/aizubrandhall/4571318635230.html"
+            onClick={(e) => handleMallClick(e, "https://store.shopping.yahoo.co.jp/aizubrandhall/4571318635230.html")}
             className="flex flex-col items-center text-center"
           >
             <div className="bg-white rounded-xl shadow-md p-4 mb-4">
