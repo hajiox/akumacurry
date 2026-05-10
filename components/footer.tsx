@@ -5,15 +5,25 @@ import Link from "next/link"
 import { Facebook, Instagram, Youtube } from "lucide-react"
 
 function handleMallClick(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
-  e.preventDefault()
   try {
-    if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
-      (window as any).fbq("trackCustom", "MallClick", { product: "butacurry" })
+    if (typeof window !== "undefined") {
+      if (typeof (window as any).fbq === "function") {
+        (window as any).fbq("trackCustom", "MallClick", { product: "butacurry" })
+      }
+      if (typeof (window as any).gtag === "function") {
+        let mall = 'unknown';
+        if (href.includes("rakuten.co.jp")) mall = "rakuten";
+        if (href.includes("amazon.co.jp")) mall = "amazon";
+        if (href.includes("yahoo.co.jp")) mall = "yahoo";
+
+        (window as any).gtag('event', 'click_purchase', {
+          event_category: 'ecommerce',
+          event_label: mall,
+          currency: 'JPY'
+        })
+      }
     }
   } catch {}
-  setTimeout(() => {
-    window.open(href, "_blank", "noopener,noreferrer")
-  }, 400)
 }
 
 function XIcon({ className }: { className?: string }) {
@@ -162,6 +172,8 @@ export default function Footer() {
         <div className="container mx-auto px-4 flex justify-center">
           <a 
             href="https://store.shopping.yahoo.co.jp/aizubrandhall/4571318635230.html"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={(e) => handleMallClick(e, "https://store.shopping.yahoo.co.jp/aizubrandhall/4571318635230.html")}
             className="flex flex-col items-center text-center"
           >
