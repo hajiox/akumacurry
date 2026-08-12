@@ -7,6 +7,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-neutral-100 overflow-x-hidden flex flex-col">
       <Header />
       <main className="flex flex-col items-center gap-6 py-6 max-w-5xl mx-auto w-[95%] md:w-[80%]">
+        <h1 className="sr-only">悪魔のBUTAカレー｜二郎インスパイアの極厚チャーシューカレー</h1>
         {/* Hero Section */}
         <section className="w-full">
           <Image

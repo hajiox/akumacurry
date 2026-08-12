@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: siteTitle,
   description: siteDescription,
+  alternates: {
+    canonical: siteUrl,
+  },
   generator: 'v0.app',
   keywords: ['悪魔のBUTAカレー', '二郎インスパイア', 'カレー', '極厚チャーシュー', '神豚', 'レトルトカレー', '会津ブランド館', '送料無料', '備蓄食'],
   authors: [{ name: '会津ブランド館' }],
