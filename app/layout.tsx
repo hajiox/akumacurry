@@ -39,17 +39,27 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/images/ogp.jpg',
-        width: 1200,
-        height: 630,
+        width: 1217,
+        height: 647,
         alt: '悪魔のBUTAカレー - 二郎インスパイア×極厚神豚カレー',
+        type: 'image/jpeg',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@Aizu_Brand_Kan',
+    creator: '@Aizu_Brand_Kan',
     title: siteTitle,
     description: siteDescription,
-    images: ['/images/ogp.jpg'],
+    images: [
+      {
+        url: '/images/ogp.jpg',
+        alt: '悪魔のBUTAカレー - 二郎インスパイア×極厚神豚カレー',
+        width: 1217,
+        height: 647,
+      },
+    ],
   },
   robots: {
     index: true,
